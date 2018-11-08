@@ -5,13 +5,13 @@ let _fixR = false;
 let _fixG = false;
 let _fixB = false;
 
-let pushButtenR = document.getElementById("R");
+let button = document.querySelector('button');
 
 function ChangeColor() {
-    var box = document.getElementById("colorSqare");
+   let box = document.getElementById("colorSqare");
 
     if(!_fixR) r = parseInt(Math.random() * 256);       //_fixR이 true일때 실행
-    else r = 255;      //false면 255로 고정함
+    else r=255;     //false면 255로 고정함
     if(!_fixG)  g = parseInt(Math.random() * 256);
     else g = 255;
     if (!_fixB) b = parseInt(Math.random() * 256);
@@ -41,12 +41,15 @@ hex.innerHTML = '#' + hexR + hexG + hexB;
 
 //flex
 function fixR (){
+    
+    //let button = document.querySelector('button');
     if(!_fixR){      //fixR이 true면 
         _fixR = true;       //flxR을 true로
-        pushButtenR.style.backgroundColor = '';
     }
-    else        //fixR이 false이면
+    else{       //fixR이 false이면
         _fixR = false;
+       button.style.transform = "translateY(4px)";
+    }
 }
 function fixG (){
     if(!_fixG)      

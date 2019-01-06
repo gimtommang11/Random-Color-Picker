@@ -24,10 +24,9 @@ function ChangeColor() {
 //to hex
 function toHex(r, g, b)
 {
-let hex = document.getElementById("colorHex");
+const hex = document.getElementById("printHex");
 
-
-let rgb = document.getElementById("printRgb");
+const rgb = document.getElementById("printRgb");
 rgb.innerHTML = r + ',' + g + ',' + b;
 
 let hexR = r.toString(16);
@@ -36,8 +35,6 @@ let hexB = b.toString(16);
 
 hex.innerHTML = '#' + hexR + hexG + hexB;
 }
-
-//
 
 //flex
 function fixR (){
